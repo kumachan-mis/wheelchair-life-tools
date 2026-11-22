@@ -1,0 +1,44 @@
+name: New skill proposal
+description: Propose a new wheelchair-life-tools skill
+title: "[Skill]: "
+labels: ["skill-proposal"]
+body:
+  - type: input
+    id: skill_name
+    attributes:
+      label: Skill name
+      placeholder: e.g. accessible-route-research
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations:
+      required: true
+  - type: textarea
+    id: intended_users_and_context
+    attributes:
+      label: Intended users and usage context
+      description: Include relevant individual conditions or assumptions, without personal identifying details.
+    validations:
+      required: false
+  - type: textarea
+    id: proposed_behavior
+    attributes:
+      label: Proposed workflow, inputs, outputs, and evidence
+    validations:
+      required: true
+  - type: checkboxes
+    id: repository_principles
+    attributes:
+      label: Repository-wide principles
+      options:
+        - label: The proposal respects user autonomy and individual differences.
+          required: true
+        - label: The proposal distinguishes facts, estimates, and unknowns where relevant.
+          required: true
+        - label: The proposal does not include personal identifying information or individual activity history.
+          required: true
+        - label: The proposal respects external service terms, copyright, and data-use conditions.
+          required: true
