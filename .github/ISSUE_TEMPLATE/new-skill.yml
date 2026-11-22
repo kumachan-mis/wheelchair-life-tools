@@ -1,0 +1,31 @@
+name: New skill proposal
+description: Propose a new wheelchair-life-tools skill
+title: "[Skill]: "
+labels: ["skill-proposal"]
+body:
+  - type: input
+    id: skill_name
+    attributes:
+      label: Skill name
+      placeholder: e.g. accessible-route-research
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_behavior
+    attributes:
+      label: Proposed workflow and evidence
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy and safety
+      options:
+        - label: This proposal does not include personal visit history, precise location, or identifying data.
+          required: true
