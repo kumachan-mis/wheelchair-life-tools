@@ -17,15 +17,28 @@ body:
     validations:
       required: true
   - type: textarea
+    id: intended_users_and_context
+    attributes:
+      label: Intended users and usage context
+      description: Include relevant individual conditions or assumptions, without personal identifying details.
+    validations:
+      required: false
+  - type: textarea
     id: proposed_behavior
     attributes:
-      label: Proposed workflow and evidence
+      label: Proposed workflow, inputs, outputs, and evidence
     validations:
       required: true
   - type: checkboxes
-    id: privacy
+    id: repository_principles
     attributes:
-      label: Privacy and safety
+      label: Repository-wide principles
       options:
-        - label: This proposal does not include personal visit history, precise location, or identifying data.
+        - label: The proposal respects user autonomy and individual differences.
+          required: true
+        - label: The proposal distinguishes facts, estimates, and unknowns where relevant.
+          required: true
+        - label: The proposal does not include personal identifying information or individual activity history.
+          required: true
+        - label: The proposal respects external service terms, copyright, and data-use conditions.
           required: true
